@@ -135,7 +135,7 @@ class NeoTermService : Service() {
   private fun createNotification(): Notification {
     val notifyIntent = Intent(this, NeoTermActivity::class.java)
     notifyIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-    val flags = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+    val flags = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
       PendingIntent.FLAG_IMMUTABLE
     } else {
       0
@@ -164,7 +164,7 @@ class NeoTermService : Service() {
     builder.addAction(
       android.R.drawable.ic_delete,
       getString(R.string.exit),
-      PendingIntent.getService(this, 0, exitIntent, 0)
+      PendingIntent.getService(this, 0, exitIntent, flags)
     )
 
     val newWakeAction = if (lockAcquired) ACTION_RELEASE_LOCK else ACTION_ACQUIRE_LOCK
@@ -176,7 +176,7 @@ class NeoTermService : Service() {
         R.string.service_acquire_lock
     )
     val actionIcon = if (lockAcquired) android.R.drawable.ic_lock_idle_lock else android.R.drawable.ic_lock_lock
-    builder.addAction(actionIcon, actionTitle, PendingIntent.getService(this, 0, toggleWakeLockIntent, 0))
+    builder.addAction(actionIcon, actionTitle, PendingIntent.getService(this, 0, toggleWakeLockIntent, flags))
 
     return builder.build()
   }
