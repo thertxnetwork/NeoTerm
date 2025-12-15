@@ -1,9 +1,9 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
-  ext.kotlin_version = '1.4.32'
+  ext.kotlin_version = '1.5.31'
   ext.android = [
-    KOTLIN_VERSION     : '1.4.32',
+    KOTLIN_VERSION     : '1.5.31',
     MIN_SDK_VERSION    : 26,
     COMPILE_SDK_VERSION: 28,
     TARGET_SDK_VERSION : 28,
