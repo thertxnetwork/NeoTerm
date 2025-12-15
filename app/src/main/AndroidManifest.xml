@@ -33,7 +33,6 @@
     <activity
       android:name=".ui.term.NeoTermActivity"
       android:configChanges="orientation|keyboardHidden|screenSize"
-      android:exported="true"
       android:launchMode="singleTask"
       android:theme="@style/AppTheme.NoActionBar.Dark"
       android:windowSoftInputMode="adjustResize|stateHidden">
@@ -54,7 +53,6 @@
 
     <activity-alias
       android:name=".NeoLotMainActivity"
-      android:exported="true"
       android:targetActivity="io.neoterm.ui.term.NeoTermActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN"/>
@@ -67,7 +65,6 @@
     <activity
       android:name=".ui.term.NeoTermRemoteInterface"
       android:configChanges="orientation|keyboardHidden"
-      android:exported="true"
       android:theme="@style/AppTheme.Dark"
       android:windowSoftInputMode="adjustResize|stateHidden">
       <intent-filter>
@@ -77,7 +74,6 @@
 
     <activity-alias
       android:name=".ui.term.TermHere"
-      android:exported="true"
       android:label="@string/term_here"
       android:targetActivity=".ui.term.NeoTermRemoteInterface">
       <intent-filter>
@@ -91,7 +87,6 @@
 
     <activity-alias
       android:name=".ui.term.UserScript"
-      android:exported="true"
       android:label="@string/user_script"
       android:targetActivity=".ui.term.NeoTermRemoteInterface">
       <intent-filter>
@@ -139,7 +134,6 @@
     <activity
       android:name=".ui.other.SetupActivity"
       android:configChanges="keyboardHidden|orientation|screenSize"
-      android:exported="true"
       android:theme="@style/AppTheme.NoActionBar"/>
     <activity
       android:name=".ui.other.BonusActivity"
