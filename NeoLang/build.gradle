@@ -3,7 +3,7 @@ apply plugin: 'kotlin'
 
 dependencies {
   implementation fileTree(dir: 'libs', include: ['*.jar'])
-  compile rootProject.ext.deps["kotlin-stdlib"]
+  implementation rootProject.ext.deps["kotlin-stdlib"]
 }
 
 buildscript {

@@ -33,6 +33,7 @@
     <activity
       android:name=".ui.term.NeoTermActivity"
       android:configChanges="orientation|keyboardHidden|screenSize"
+      android:exported="true"
       android:launchMode="singleTask"
       android:theme="@style/AppTheme.NoActionBar.Dark"
       android:windowSoftInputMode="adjustResize|stateHidden">
@@ -53,6 +54,7 @@
 
     <activity-alias
       android:name=".NeoLotMainActivity"
+      android:exported="true"
       android:targetActivity="io.neoterm.ui.term.NeoTermActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN"/>
