@@ -161,7 +161,7 @@ object NeoPreference {
   }
 
   fun getLoginShellName(): String {
-    return loadString(R.string.key_general_shell, DefaultValues.loginShell)
+    return loadString(R.string.key_general_shell, DefaultValues.loginShell) ?: DefaultValues.loginShell
   }
 
   fun getLoginShellPath(): String {
@@ -216,7 +216,7 @@ object NeoPreference {
     return loadString(
       R.string.key_general_initial_command,
       DefaultValues.initialCommand
-    )
+    ) ?: DefaultValues.initialCommand
   }
 
   fun isBellEnabled(): Boolean {
