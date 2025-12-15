@@ -42,8 +42,7 @@ class ColorItemAdapter(
 
       override fun areContentsTheSame(oldItem: ColorItem, newItem: ColorItem): Boolean {
         return oldItem.colorType == newItem.colorType &&
-               oldItem.colorValue == newItem.colorValue &&
-               oldItem.colorName == newItem.colorName
+               oldItem.colorValue == newItem.colorValue
       }
     }
   }
@@ -61,7 +60,7 @@ class ColorItemAdapter(
   }
 
   override fun getSectionName(position: Int): String {
-    return colorList[position].colorName[0].toString()
+    return getItem(position).colorName[0].toString()
   }
 
   override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ColorItemViewHolder {
