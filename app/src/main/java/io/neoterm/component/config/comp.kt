@@ -126,7 +126,7 @@ object NeoPreference {
     return preference!!.getInt(key, defaultValue)
   }
 
-  fun loadString(key: String?, defaultValue: String?): String {
+  fun loadString(key: String?, defaultValue: String?): String? {
     return preference!!.getString(key, defaultValue)
   }
 
