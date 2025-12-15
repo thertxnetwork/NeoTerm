@@ -135,7 +135,12 @@ class NeoTermService : Service() {
   private fun createNotification(): Notification {
     val notifyIntent = Intent(this, NeoTermActivity::class.java)
     notifyIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-    val pendingIntent = PendingIntent.getActivity(this, 0, notifyIntent, 0)
+    val flags = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+      PendingIntent.FLAG_IMMUTABLE
+    } else {
+      0
+    }
+    val pendingIntent = PendingIntent.getActivity(this, 0, notifyIntent, flags)
 
     val sessionCount = mTerminalSessions.size
     val xSessionCount = mXSessions.size
