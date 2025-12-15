@@ -65,7 +65,7 @@ abstract class OfflineConnection : SourceConnection {
   private var inputStream: InputStream? = null
 
   @Throws(IOException::class)
-  protected abstract fun openInputStream(): InputStream
+  protected abstract fun openInputStream(): InputStream?
 
   @Throws(IOException::class)
   override fun getInputStream(): InputStream {

@@ -114,7 +114,7 @@ object NeoPreference {
     return loadInt(App.get().getString(key), defaultValue)
   }
 
-  fun loadString(key: Int, defaultValue: String?): String {
+  fun loadString(key: Int, defaultValue: String?): String? {
     return loadString(App.get().getString(key), defaultValue)
   }
 
